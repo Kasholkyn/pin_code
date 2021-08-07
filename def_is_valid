@@ -1,0 +1,19 @@
+def is_valid(pin_code):
+    """check if number in a pin_code is a real pin"""
+    if ' ' in pin_code:
+        return False
+        exit()
+    if len(pin_code) != 4 and len(pin_code) != 6:
+        return False
+        exit()
+    try:
+        pin_code0 = int(pin_code)
+        return True
+    except:
+        return False
+
+print(is_valid("1234"))
+print(is_valid("45135"))
+print(is_valid("89abc1"))
+print(is_valid("900876"))
+print(is_valid(" 4983"))
